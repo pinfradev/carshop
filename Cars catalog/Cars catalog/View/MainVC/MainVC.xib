@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="Cars_catalog" customModuleProvider="target">
+            <connections>
+                <outlet property="NewCategoryButton" destination="YyX-z6-4z0" id="t86-jM-qWF"/>
+                <outlet property="categoriesTF" destination="HCX-6f-Qln" id="SAW-9b-ZAw"/>
+                <outlet property="collectionView" destination="0J1-dn-akR" id="GsE-u2-yrs"/>
+                <outlet property="currentCategory" destination="GSI-6m-Xk0" id="bn1-xh-IXg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSI-6m-Xk0">
+                    <rect key="frame" x="199" y="84" width="16.5" height="29"/>
+                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="24"/>
+                    <color key="textColor" red="0.85882352941176465" green="0.85098039215686272" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azj-2g-ZfI">
+                    <rect key="frame" x="33" y="142" width="348" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Polygon1" translatesAutoresizingMaskIntoConstraints="NO" id="pAm-V1-ZA4">
+                            <rect key="frame" x="310" y="8" width="30" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="11i-hV-cfr"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HCX-6f-Qln">
+                            <rect key="frame" x="8" y="8" width="282" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="HCX-6f-Qln" firstAttribute="leading" secondItem="Azj-2g-ZfI" secondAttribute="leading" constant="8" id="1li-JE-HKc"/>
+                        <constraint firstAttribute="bottom" secondItem="HCX-6f-Qln" secondAttribute="bottom" constant="8" id="5Xc-9D-zX8"/>
+                        <constraint firstItem="HCX-6f-Qln" firstAttribute="top" secondItem="Azj-2g-ZfI" secondAttribute="top" constant="8" id="BhL-ve-e48"/>
+                        <constraint firstItem="pAm-V1-ZA4" firstAttribute="top" secondItem="Azj-2g-ZfI" secondAttribute="top" constant="8" id="FkH-tE-h8y"/>
+                        <constraint firstItem="pAm-V1-ZA4" firstAttribute="leading" secondItem="HCX-6f-Qln" secondAttribute="trailing" constant="20" id="KN4-Gp-YmC"/>
+                        <constraint firstAttribute="height" constant="50" id="MvA-NW-vaC"/>
+                        <constraint firstAttribute="trailing" secondItem="pAm-V1-ZA4" secondAttribute="trailing" constant="8" id="WQj-7N-3Fn"/>
+                        <constraint firstAttribute="bottom" secondItem="pAm-V1-ZA4" secondAttribute="bottom" constant="8" id="xhN-fu-p5D"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyX-z6-4z0">
+                    <rect key="frame" x="114" y="231" width="186" height="32"/>
+                    <color key="backgroundColor" red="0.23529411764705882" green="0.43529411764705883" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="186" id="R7u-dQ-ZR3"/>
+                        <constraint firstAttribute="height" constant="32" id="sZh-1k-neJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                    <state key="normal" title="...">
+                        <color key="titleColor" red="0.85882352941176465" green="0.85098039215686272" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0J1-dn-akR">
+                    <rect key="frame" x="41" y="303" width="340" height="545"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="w8e-QY-RUQ">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Azj-2g-ZfI" firstAttribute="top" secondItem="GSI-6m-Xk0" secondAttribute="bottom" constant="29" id="08V-d9-mlK"/>
+                <constraint firstItem="YyX-z6-4z0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9Ax-IS-ABR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GSI-6m-Xk0" secondAttribute="trailing" constant="10" id="Bw1-Fn-vWy"/>
+                <constraint firstItem="GSI-6m-Xk0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BwG-Ro-ZES"/>
+                <constraint firstItem="GSI-6m-Xk0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="GVU-um-d6U"/>
+                <constraint firstItem="YyX-z6-4z0" firstAttribute="top" secondItem="Azj-2g-ZfI" secondAttribute="bottom" constant="39" id="Gyn-nF-Apw"/>
+                <constraint firstItem="0J1-dn-akR" firstAttribute="trailing" secondItem="Azj-2g-ZfI" secondAttribute="trailing" id="QbT-I6-IJR"/>
+                <constraint firstItem="Azj-2g-ZfI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="33" id="Shc-vV-92Y"/>
+                <constraint firstItem="GSI-6m-Xk0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="SnY-IE-LRO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0J1-dn-akR" secondAttribute="bottom" constant="14" id="hGi-1l-8CM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Azj-2g-ZfI" secondAttribute="trailing" constant="33" id="juk-cZ-OMZ"/>
+                <constraint firstItem="0J1-dn-akR" firstAttribute="leading" secondItem="HCX-6f-Qln" secondAttribute="leading" id="mpB-7A-fZa"/>
+                <constraint firstItem="0J1-dn-akR" firstAttribute="top" secondItem="YyX-z6-4z0" secondAttribute="bottom" constant="40" id="sbR-jQ-MDf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="140.57971014492756" y="153.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Polygon1" width="25" height="19"/>
+    </resources>
+</document>
