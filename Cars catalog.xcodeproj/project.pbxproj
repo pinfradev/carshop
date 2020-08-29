@@ -15,6 +15,7 @@
 		AB05A7D524FAF5DD00938D70 /* ModifyVehicleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05A7D324FAF5DD00938D70 /* ModifyVehicleVC.swift */; };
 		AB05A7D624FAF5DD00938D70 /* ModifyVehicleVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB05A7D424FAF5DD00938D70 /* ModifyVehicleVC.xib */; };
 		AB05A7D824FB038000938D70 /* ResultForTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05A7D724FB038000938D70 /* ResultForTransactionVC.swift */; };
+		AB05A7DA24FB0AC800938D70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB05A7D924FB0AC800938D70 /* GoogleService-Info.plist */; };
 		AB6CADC224FA7E5000813964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6CADC124FA7E5000813964 /* AppDelegate.swift */; };
 		AB6CADCB24FA7E7A00813964 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6CADCA24FA7E7A00813964 /* Assets.xcassets */; };
 		AB6CADCE24FA7E7A00813964 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6CADCC24FA7E7A00813964 /* LaunchScreen.storyboard */; };
@@ -52,6 +53,7 @@
 		AB05A7D324FAF5DD00938D70 /* ModifyVehicleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyVehicleVC.swift; sourceTree = "<group>"; };
 		AB05A7D424FAF5DD00938D70 /* ModifyVehicleVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyVehicleVC.xib; sourceTree = "<group>"; };
 		AB05A7D724FB038000938D70 /* ResultForTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultForTransactionVC.swift; sourceTree = "<group>"; };
+		AB05A7D924FB0AC800938D70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AB6CADBE24FA7E5000813964 /* Cars catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cars catalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6CADC124FA7E5000813964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB6CADCA24FA7E7A00813964 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				AB6CADCA24FA7E7A00813964 /* Assets.xcassets */,
 				AB6CADCC24FA7E7A00813964 /* LaunchScreen.storyboard */,
 				AB6CADCF24FA7E7A00813964 /* Info.plist */,
+				AB05A7D924FB0AC800938D70 /* GoogleService-Info.plist */,
 			);
 			path = "Cars catalog";
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				AB6CADCE24FA7E7A00813964 /* LaunchScreen.storyboard in Resources */,
 				AB05A7D624FAF5DD00938D70 /* ModifyVehicleVC.xib in Resources */,
 				AB6CAE2024FABBA600813964 /* DetailsForVehicleVC.xib in Resources */,
+				AB05A7DA24FB0AC800938D70 /* GoogleService-Info.plist in Resources */,
 				AB6CAE2A24FABCFF00813964 /* ShowDoubleLineItemCell.xib in Resources */,
 				AB6CADEC24FA9E1200813964 /* Lato-Black.ttf in Resources */,
 				AB6CADCB24FA7E7A00813964 /* Assets.xcassets in Resources */,

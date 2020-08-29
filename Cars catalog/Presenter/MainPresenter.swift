@@ -14,7 +14,7 @@ protocol MainVCDelegate {
 }
 
 class MainPresenter {
-    
+    var view: MainVCDelegate?
     init(view: MainVCDelegate) {
         
     }

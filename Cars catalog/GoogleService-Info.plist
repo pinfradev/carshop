@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>657024431318-941rtr9m16stq06410fghasp7plne4h1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.657024431318-941rtr9m16stq06410fghasp7plne4h1</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCLHZ8FneuN-Uxl1jTSuegWEsguAMHOpWw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>657024431318</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>xyz.cars.Cars-catalog</string>
+	<key>PROJECT_ID</key>
+	<string>carshop-838c6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>carshop-838c6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:657024431318:ios:c78c00497fe2c52a9f8577</string>
+	<key>DATABASE_URL</key>
+	<string>https://carshop-838c6.firebaseio.com</string>
+</dict>
+</plist>
