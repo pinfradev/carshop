@@ -7,4 +7,8 @@ target 'Cars catalog' do
 
   # Pods for Cars catalog
 
+# add pods for desired Firebase products
+# https://firebase.google.com/docs/ios/setup#available-pods
+
+pod 'Firebase/Firestore'
 end
