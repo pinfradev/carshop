@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		AB05A7D624FAF5DD00938D70 /* ModifyVehicleVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB05A7D424FAF5DD00938D70 /* ModifyVehicleVC.xib */; };
 		AB05A7D824FB038000938D70 /* ResultForTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05A7D724FB038000938D70 /* ResultForTransactionVC.swift */; };
 		AB05A7DA24FB0AC800938D70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB05A7D924FB0AC800938D70 /* GoogleService-Info.plist */; };
+		AB05A7DC24FB1AD400938D70 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05A7DB24FB1AD400938D70 /* MainService.swift */; };
 		AB6CADC224FA7E5000813964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6CADC124FA7E5000813964 /* AppDelegate.swift */; };
 		AB6CADCB24FA7E7A00813964 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6CADCA24FA7E7A00813964 /* Assets.xcassets */; };
 		AB6CADCE24FA7E7A00813964 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6CADCC24FA7E7A00813964 /* LaunchScreen.storyboard */; };
@@ -58,6 +59,7 @@
 		AB05A7D424FAF5DD00938D70 /* ModifyVehicleVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyVehicleVC.xib; sourceTree = "<group>"; };
 		AB05A7D724FB038000938D70 /* ResultForTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultForTransactionVC.swift; sourceTree = "<group>"; };
 		AB05A7D924FB0AC800938D70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB05A7DB24FB1AD400938D70 /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		AB6CADBE24FA7E5000813964 /* Cars catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cars catalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6CADC124FA7E5000813964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB6CADCA24FA7E7A00813964 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,7 +120,6 @@
 				1A78EA873F93842BDE2918EC /* Pods-Cars catalog.debug.xcconfig */,
 				692B3D2C29310569933D3F47 /* Pods-Cars catalog.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -202,6 +203,7 @@
 		AB6CADD824FA815900813964 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				AB05A7DB24FB1AD400938D70 /* MainService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -489,6 +491,7 @@
 				AB6CAE1324FAB73D00813964 /* ButtonCell.swift in Sources */,
 				AB05A7D824FB038000938D70 /* ResultForTransactionVC.swift in Sources */,
 				AB05A7D524FAF5DD00938D70 /* ModifyVehicleVC.swift in Sources */,
+				AB05A7DC24FB1AD400938D70 /* MainService.swift in Sources */,
 				AB6CAE2924FABCFF00813964 /* ShowDoubleLineItemCell.swift in Sources */,
 				AB05A7C924FADAB900938D70 /* Vehicle.swift in Sources */,
 				AB05A7CF24FADC6700938D70 /* CommercialVehicle.swift in Sources */,

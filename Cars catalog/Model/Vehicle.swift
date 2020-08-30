@@ -12,8 +12,12 @@ import Foundation
 class Vehicle {
     var numberOfSeats: Int?
     var price: Double?
-    var condition: String?
+    var newOld: String?
     var model: String?
-    var date: Date?
+    var date: Int?
     var category: String?
+    var photo: String?
+    var batery: String?
+    var payload: Double?
+    var space: String?
 }

@@ -20,6 +20,8 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        presenter = MainPresenter(view: self)
+        presenter?.getVehicles()
         setupCollectionView()
     }
     func setupCollectionView() {
@@ -42,7 +44,10 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionCells.getCollectionCellIdentifier(.catalogItemCell), for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionCells.getCollectionCellIdentifier(.catalogItemCell), for: indexPath) as! CatalogItemCell
+        if let car = vehicles?[indexPath.row] {
+            cell.setupUI(vehicle: car)
+        }
          return cell
     }
     
@@ -53,6 +58,20 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CollectionCells.getSizeForCell(.catalogItemCell)
+    }
+    
+    
+}
+
+extension MainVC: MainVCDelegate {
+    func getVehiclesSucceded(vehicles: [Vehicle]) {
+        self.vehicles = vehicles
+        self.collectionView.reloadData()
+    }
+    
+    func getVehiclesFailed(error: String) {
+        let alert = UIAlertController(title: "", message: error, preferredStyle: .alert)
+        navigationController?.present(alert, animated: true, completion: nil)
     }
     
     

@@ -9,10 +9,21 @@
 import UIKit
 
 class CatalogItemCell: UICollectionViewCell {
-
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    func setupUI(vehicle: Vehicle) {
+        if let photo = vehicle.photo {
+            
+        }
+        
+        if let title = vehicle.model{
+            titleLabel.text = title
+        }
     }
 
 }

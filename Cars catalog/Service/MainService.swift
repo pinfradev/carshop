@@ -1,0 +1,65 @@
+//
+//  MainService.swift
+//  Cars catalog
+//
+//  Created by Fray Pineda on 8/29/20.
+//  Copyright © 2020 New town. All rights reserved.
+//
+
+import Foundation
+import Firebase
+
+class MainService {
+   class func getVehicles(successBlock: @escaping (_ vehicles: [Vehicle]) -> (), errorBlock: @escaping (_ error: String) -> ()) {
+        let db = Firestore.firestore()
+        var vehiclesArray: [Vehicle] = []
+        db.collection("vehicles").getDocuments() { (result, err) in
+            if let err = err {
+                errorBlock("An error \(err) has ocurred")
+                return
+            } else {
+                for document in result!.documents {
+                    let currentVehicle = Vehicle()
+                    let currentDocument = document.data()
+                    if let seats = currentDocument["numberOfSeats"] as? Int {
+                        currentVehicle.numberOfSeats = seats
+                    }
+                    if let price = currentDocument["price"] as? Double {
+                        currentVehicle.price = price
+                    }
+                    if let newOld = currentDocument["newOld"] as? String {
+                        currentVehicle.newOld = newOld
+                    }
+                    if let photo = currentDocument["photo"] as? String {
+                        currentVehicle.photo = photo
+                    }
+                    if let model = currentDocument["model"] as? String {
+                        currentVehicle.model = model
+                    }
+                    if let date = currentDocument["date"] as? Int {
+                        currentVehicle.date = date
+                    }
+                    if let category = currentDocument["category"] as? DocumentReference{
+                        category.getDocument(completion: { res,e in
+                            if let e = e {
+                                print("el error es: \(e)")
+                            } else {
+                                if let data = res?.data() {
+                                    if let cat = data["name"] as? String {
+                                        currentVehicle.category = cat
+                                    }
+                                }
+                            }
+                        })
+                    }
+                    
+                    vehiclesArray.append(currentVehicle)
+                    
+                }
+                successBlock(vehiclesArray)
+            }
+            
+        }
+        
+    }
+}
