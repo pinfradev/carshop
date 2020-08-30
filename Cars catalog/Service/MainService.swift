@@ -21,6 +21,8 @@ class MainService {
                 for document in result!.documents {
                     let currentVehicle = Vehicle()
                     let currentDocument = document.data()
+                    
+                    currentVehicle.documentPath = document.reference.path
                     if let seats = currentDocument["numberOfSeats"] as? Int {
                         currentVehicle.numberOfSeats = seats
                     }
@@ -38,6 +40,15 @@ class MainService {
                     }
                     if let date = currentDocument["date"] as? Int {
                         currentVehicle.date = date
+                    }
+                    if let payload = currentDocument["payload"] as? Double {
+                        currentVehicle.payload = payload
+                    }
+                    if let batery = currentDocument["batery"] as? String {
+                        currentVehicle.batery = batery
+                    }
+                    if let space = currentDocument["space"] as? String {
+                        currentVehicle.space = space
                     }
                     if let category = currentDocument["category"] as? DocumentReference{
                         category.getDocument(completion: { res,e in
@@ -61,5 +72,27 @@ class MainService {
             
         }
         
+    }
+    
+    class func getCategories(successBlock: @escaping (_ category: [VehicleCategory]) -> (), errorBlock: @escaping (_ error: String) -> ()) {
+         let db = Firestore.firestore()
+        var categoriesArray: [VehicleCategory] = []
+        db.collection("categories").getDocuments() { (result, err) in
+            if let err = err {
+                errorBlock("An error \(err) has ocurred")
+                return
+            } else {
+                for document in result!.documents {
+                    let currentCategory = VehicleCategory()
+                    let currentDocument = document.data()
+                    currentCategory.documentPath = document.reference.path
+                    if let name = currentDocument["name"] as? String {
+                        currentCategory.name = name
+                    }
+                    categoriesArray.append(currentCategory)
+                }
+                successBlock(categoriesArray)
+            }
+        }
     }
 }

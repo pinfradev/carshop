@@ -58,4 +58,9 @@ extension UIViewController {
             navigationItem.rightBarButtonItem?.title = title
         }
     }
+    
+    func showAlert(title: String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        navigationController?.present(alert, animated: true, completion: nil)
+    }
 }

@@ -10,6 +10,7 @@ import Foundation
 
 
 class Vehicle {
+    var documentPath: String?
     var numberOfSeats: Int?
     var price: Double?
     var newOld: String?

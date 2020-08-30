@@ -44,6 +44,9 @@
 		AB6CAE2524FABCAC00813964 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6CAE2324FABCAC00813964 /* ImageCell.xib */; };
 		AB6CAE2924FABCFF00813964 /* ShowDoubleLineItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6CAE2724FABCFF00813964 /* ShowDoubleLineItemCell.swift */; };
 		AB6CAE2A24FABCFF00813964 /* ShowDoubleLineItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6CAE2824FABCFF00813964 /* ShowDoubleLineItemCell.xib */; };
+		AB97E08224FC0E9A00276A90 /* VehicleCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97E08124FC0E9A00276A90 /* VehicleCategory.swift */; };
+		AB97E08424FC449800276A90 /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97E08324FC449800276A90 /* StoreService.swift */; };
+		AB97E08624FC457B00276A90 /* SavigPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97E08524FC457B00276A90 /* SavigPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +95,9 @@
 		AB6CAE2324FABCAC00813964 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		AB6CAE2724FABCFF00813964 /* ShowDoubleLineItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDoubleLineItemCell.swift; sourceTree = "<group>"; };
 		AB6CAE2824FABCFF00813964 /* ShowDoubleLineItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDoubleLineItemCell.xib; sourceTree = "<group>"; };
+		AB97E08124FC0E9A00276A90 /* VehicleCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCategory.swift; sourceTree = "<group>"; };
+		AB97E08324FC449800276A90 /* StoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
+		AB97E08524FC457B00276A90 /* SavigPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavigPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +182,7 @@
 				AB05A7CA24FADC3200938D70 /* Truck.swift */,
 				AB05A7CC24FADC4400938D70 /* ElectricalVehicle.swift */,
 				AB05A7CE24FADC6700938D70 /* CommercialVehicle.swift */,
+				AB97E08124FC0E9A00276A90 /* VehicleCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				AB05A7D024FADEDF00938D70 /* MainPresenter.swift */,
+				AB97E08524FC457B00276A90 /* SavigPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -204,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				AB05A7DB24FB1AD400938D70 /* MainService.swift */,
+				AB97E08324FC449800276A90 /* StoreService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -490,6 +499,7 @@
 				AB05A7CB24FADC3200938D70 /* Truck.swift in Sources */,
 				AB6CAE1324FAB73D00813964 /* ButtonCell.swift in Sources */,
 				AB05A7D824FB038000938D70 /* ResultForTransactionVC.swift in Sources */,
+				AB97E08624FC457B00276A90 /* SavigPresenter.swift in Sources */,
 				AB05A7D524FAF5DD00938D70 /* ModifyVehicleVC.swift in Sources */,
 				AB05A7DC24FB1AD400938D70 /* MainService.swift in Sources */,
 				AB6CAE2924FABCFF00813964 /* ShowDoubleLineItemCell.swift in Sources */,
@@ -497,6 +507,8 @@
 				AB05A7CF24FADC6700938D70 /* CommercialVehicle.swift in Sources */,
 				AB6CADC224FA7E5000813964 /* AppDelegate.swift in Sources */,
 				AB6CAE2424FABCAC00813964 /* ImageCell.swift in Sources */,
+				AB97E08224FC0E9A00276A90 /* VehicleCategory.swift in Sources */,
+				AB97E08424FC449800276A90 /* StoreService.swift in Sources */,
 				AB6CADDC24FA81F100813964 /* MainVC.swift in Sources */,
 				AB6CAE0F24FAB6A200813964 /* AddInfoItemCell.swift in Sources */,
 				AB05A7CD24FADC4400938D70 /* ElectricalVehicle.swift in Sources */,

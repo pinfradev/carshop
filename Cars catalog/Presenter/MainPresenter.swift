@@ -12,7 +12,8 @@ import UIKit
 protocol MainVCDelegate {
     func getVehiclesSucceded(vehicles: [Vehicle])
     func getVehiclesFailed(error: String)
-    
+    func getCategoriesSucceded(categories: [VehicleCategory])
+    func getCategoriesFailed(error: String)
 }
 
 class MainPresenter {
@@ -26,6 +27,14 @@ class MainPresenter {
             self?.view?.getVehiclesSucceded(vehicles: vehicles)
         }, errorBlock: { [weak self] error in
             self?.view?.getVehiclesFailed(error: error)
+        })
+    }
+    
+    func getCategories() {
+        MainService.getCategories(successBlock: {[weak self] categories in
+            self?.view?.getCategoriesSucceded(categories: categories)
+        }, errorBlock: { [weak self] error in
+            self?.view?.getCategoriesFailed(error: error)
         })
     }
 }
