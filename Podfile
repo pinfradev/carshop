@@ -13,4 +13,5 @@ target 'Cars catalog' do
 pod 'Firebase/Firestore'
 pod 'Firebase/Core'
 pod 'FirebaseFirestoreSwift'
+pod 'SDWebImage', '~> 5.0'
 end

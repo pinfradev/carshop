@@ -24,6 +24,8 @@ class MainVC: UIViewController {
         presenter?.getVehicles()
         setupCollectionView()
     }
+    
+    
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -32,7 +34,7 @@ class MainVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
-        
+        collectionView.reloadData()
     }
 
 }
@@ -40,7 +42,7 @@ class MainVC: UIViewController {
 extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return vehicles?.count ?? 5
+        return vehicles?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

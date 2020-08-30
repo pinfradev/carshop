@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CatalogItemCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
@@ -17,8 +18,8 @@ class CatalogItemCell: UICollectionViewCell {
     }
     
     func setupUI(vehicle: Vehicle) {
-        if let photo = vehicle.photo {
-            
+        if let photo = vehicle.urlPhoto {
+            imageView.sd_setImage(with: photo, completed: nil)
         }
         
         if let title = vehicle.model{

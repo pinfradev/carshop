@@ -20,4 +20,13 @@ class Vehicle {
     var batery: String?
     var payload: Double?
     var space: String?
+    
+    var urlPhoto: URL? {
+        if let picture = photo {
+            let url = URL(string: picture)
+            return url
+        } else {
+            return nil
+        }
+    }
 }
