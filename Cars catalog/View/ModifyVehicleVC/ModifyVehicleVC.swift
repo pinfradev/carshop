@@ -10,6 +10,9 @@ import UIKit
 
 class ModifyVehicleVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
     var currentVehicle: Vehicle?
     var currentCategory: VehicleCategory?
     var presenter: SavingPresenter?
@@ -117,7 +120,7 @@ extension ModifyVehicleVC: UITableViewDelegate, UITableViewDataSource {
         if let photo = currentVehicle?.photo {
             dict["photo"] = photo
         }
-
+        activityIndicator.startAnimating()
         presenter?.updateVehicle(path: currentVehicle?.documentPath ?? "", dict: dict)
       }
     
@@ -129,11 +132,13 @@ extension ModifyVehicleVC: UITableViewDelegate, UITableViewDataSource {
 
 extension ModifyVehicleVC: ModifyView {
     func modifyVehicleSucceded(message: String) {
+        activityIndicator.stopAnimating()
         let vc = ViewsFactory.getViewControllerFromFactory(.resultForTransactionVC)
         navigationController?.pushViewController(vc, animated: true)
     }
     
     func modifyVehicleFailed(error: String) {
+        activityIndicator.stopAnimating()
         showAlert(title: "", message: error)
     }
     

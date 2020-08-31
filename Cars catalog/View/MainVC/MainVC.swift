@@ -46,6 +46,8 @@ class MainVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
+        currentCategoryLabel.text = ""
+        categoriesTF.text = ""
         activityIndicator.startAnimating()
         presenter?.getVehicles()
     }
@@ -92,6 +94,7 @@ extension MainVC: MainVCDelegate {
     }
     
     func getCategoriesFailed(error: String) {
+        activityIndicator.stopAnimating()
         showAlert(title: "", message: error)
     }
     
@@ -104,6 +107,7 @@ extension MainVC: MainVCDelegate {
     }
     
     func getVehiclesFailed(error: String) {
+        activityIndicator.stopAnimating()
         showAlert(title: "", message: error)
     }
     
