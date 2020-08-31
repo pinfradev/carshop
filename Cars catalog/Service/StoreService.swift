@@ -21,4 +21,15 @@ class StoreService {
             }
         })
     }
+    
+    class func saveNewCategory(dict: [String: Any], successBlock: @escaping (_ message: String) -> (), errorBlock: @escaping (_ error: String) -> ()) {
+        let db = Firestore.firestore()
+        db.collection("categories").addDocument(data: dict, completion: { error in
+            if let err = error {
+                errorBlock(err.localizedDescription)
+            } else {
+                successBlock("Successfully updated")
+            }
+        })
+    }
 }

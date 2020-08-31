@@ -37,6 +37,7 @@ class MainVC: UIViewController {
     func setupUI() {
         let strings = Localizables.MainVC.self
         newCategoryButton.setTitle(strings.buttonTitle, for: .normal)
+        newCategoryButton.addTarget(self, action: #selector(newCategoryButtonTapped), for: .touchUpInside)
     }
     func setupCollectionView() {
         collectionView.delegate = self
@@ -50,6 +51,11 @@ class MainVC: UIViewController {
         categoriesTF.text = ""
         activityIndicator.startAnimating()
         presenter?.getVehicles()
+    }
+    
+    @objc func newCategoryButtonTapped() {
+        let vc = ViewsFactory.getViewControllerFromFactory(.newCategoryVC)
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }

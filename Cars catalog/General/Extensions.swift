@@ -60,7 +60,9 @@ extension UIViewController {
     }
     
     func showAlert(title: String, message:String) {
+        let alertAction = UIAlertAction(title: "Accept", style: .default, handler: nil)
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(alertAction)
         navigationController?.present(alert, animated: true, completion: nil)
     }
 }
