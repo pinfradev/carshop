@@ -47,6 +47,8 @@
 		AB8E154C24FC7DEE00ECA4F2 /* SavingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8E154B24FC7DEE00ECA4F2 /* SavingPresenter.swift */; };
 		AB97E08224FC0E9A00276A90 /* VehicleCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97E08124FC0E9A00276A90 /* VehicleCategory.swift */; };
 		AB97E08424FC449800276A90 /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97E08324FC449800276A90 /* StoreService.swift */; };
+		ABB633DB24FD5E4600B85718 /* VehicleExtraInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB633D924FD5E4600B85718 /* VehicleExtraInfoVC.swift */; };
+		ABB633DC24FD5E4600B85718 /* VehicleExtraInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB633DA24FD5E4600B85718 /* VehicleExtraInfoVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +100,8 @@
 		AB8E154B24FC7DEE00ECA4F2 /* SavingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingPresenter.swift; sourceTree = "<group>"; };
 		AB97E08124FC0E9A00276A90 /* VehicleCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCategory.swift; sourceTree = "<group>"; };
 		AB97E08324FC449800276A90 /* StoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
+		ABB633D924FD5E4600B85718 /* VehicleExtraInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleExtraInfoVC.swift; sourceTree = "<group>"; };
+		ABB633DA24FD5E4600B85718 /* VehicleExtraInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleExtraInfoVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,7 @@
 		AB6CADD624FA813F00813964 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ABB633D824FD5DE500B85718 /* VehicleExtraInfoVC */,
 				AB05A7D224FAF5A600938D70 /* ModifyVehicleVC */,
 				AB6CAE1C24FABB6A00813964 /* DetailsForVehicleVC */,
 				AB6CAE1724FAB95B00813964 /* ResultForTransactionVC */,
@@ -366,6 +371,15 @@
 			path = ShowDoubleLineItemCell;
 			sourceTree = "<group>";
 		};
+		ABB633D824FD5DE500B85718 /* VehicleExtraInfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				ABB633D924FD5E4600B85718 /* VehicleExtraInfoVC.swift */,
+				ABB633DA24FD5E4600B85718 /* VehicleExtraInfoVC.xib */,
+			);
+			path = VehicleExtraInfoVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,6 +444,7 @@
 				AB6CADDD24FA81F100813964 /* MainVC.xib in Resources */,
 				AB6CADEE24FA9E2C00813964 /* Lato-Bold.ttf in Resources */,
 				AB6CADE324FA82D500813964 /* Localizable.strings in Resources */,
+				ABB633DC24FD5E4600B85718 /* VehicleExtraInfoVC.xib in Resources */,
 				AB6CAE0B24FAAEFE00813964 /* NewCategoryVC.xib in Resources */,
 				AB6CAE1B24FAB9A000813964 /* ResultForTransactionVC.xib in Resources */,
 				AB6CADCE24FA7E7A00813964 /* LaunchScreen.storyboard in Resources */,
@@ -506,6 +521,7 @@
 				AB05A7C924FADAB900938D70 /* Vehicle.swift in Sources */,
 				AB05A7CF24FADC6700938D70 /* CommercialVehicle.swift in Sources */,
 				AB6CADC224FA7E5000813964 /* AppDelegate.swift in Sources */,
+				ABB633DB24FD5E4600B85718 /* VehicleExtraInfoVC.swift in Sources */,
 				AB6CAE2424FABCAC00813964 /* ImageCell.swift in Sources */,
 				AB97E08224FC0E9A00276A90 /* VehicleCategory.swift in Sources */,
 				AB97E08424FC449800276A90 /* StoreService.swift in Sources */,

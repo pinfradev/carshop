@@ -41,7 +41,7 @@ class MainService {
                     if let date = currentDocument["date"] as? Int {
                         currentVehicle.date = date
                     }
-                    if let payload = currentDocument["payload"] as? Double {
+                    if let payload = currentDocument["payload"] as? String {
                         currentVehicle.payload = payload
                     }
                     if let batery = currentDocument["batery"] as? String {

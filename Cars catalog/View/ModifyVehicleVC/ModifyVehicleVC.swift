@@ -130,7 +130,7 @@ extension ModifyVehicleVC: UITableViewDelegate, UITableViewDataSource {
         if let c = tableView.cellForRow(at: IndexPath(row: 5, section: 0)) as? AddInfoItemCell  {
             dict["date"] = Int(c.valueTextField.text ?? "0")
         }
-        if let cat = currentVehicle?.categoryReference {
+        
             let categoryReference = allCategories?.first(where: { category in
                 if let name = category.name, let selected = selectedCategory {
                     return name.uppercased() == selected.uppercased()
@@ -141,14 +141,51 @@ extension ModifyVehicleVC: UITableViewDelegate, UITableViewDataSource {
             if let foundCategory = categoryReference {
                 dict["category"] = foundCategory.documentReference
             } else {
-                dict["category"] = cat
+                if let cat = currentVehicle?.categoryReference {
+                    dict["category"] = cat
+                }
             }
-            
-        }
         
         if let photo = currentVehicle?.photo {
             dict["photo"] = photo
         }
+        
+        if let categoryCell = categoryCell {
+            if let category = categoryCell.valueTextField.text {
+                if category.uppercased() == InitialCategories.COMMERCIAL.rawValue.uppercased() {
+                    let vc = ViewsFactory.getViewControllerFromFactory(.vehicleExtraInfoVC) as! VehicleExtraInfoVC
+                    vc.type = InitialCategories.COMMERCIAL
+                    vc.dict = dict
+                    vc.currentVehicle = self.currentVehicle
+                    navigationController?.pushViewController(vc, animated: true)
+                    return
+                }
+            }
+        }
+        if let categoryCell = categoryCell {
+            if let category = categoryCell.valueTextField.text {
+                if category.uppercased() == InitialCategories.TRUCK.rawValue.uppercased() {
+                    let vc = ViewsFactory.getViewControllerFromFactory(.vehicleExtraInfoVC) as! VehicleExtraInfoVC
+                    vc.type = InitialCategories.TRUCK
+                    vc.dict = dict
+                    vc.currentVehicle = self.currentVehicle
+                    navigationController?.pushViewController(vc, animated: true)
+                    return
+                }
+            }
+        }
+        if let categoryCell = categoryCell {
+                   if let category = categoryCell.valueTextField.text {
+                       if category.uppercased() == InitialCategories.ELECTRICAL.rawValue.uppercased() {
+                           let vc = ViewsFactory.getViewControllerFromFactory(.vehicleExtraInfoVC) as! VehicleExtraInfoVC
+                           vc.type = InitialCategories.ELECTRICAL
+                           vc.dict = dict
+                           vc.currentVehicle = self.currentVehicle
+                           navigationController?.pushViewController(vc, animated: true)
+                           return
+                       }
+                   }
+               }
         activityIndicator.startAnimating()
         presenter?.updateVehicle(path: currentVehicle?.documentPath ?? "", dict: dict)
       }
