@@ -10,12 +10,20 @@ import UIKit
 
 class ResultForTransactionVC: UIViewController {
 
+    
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var button: UIButton!
      override func viewDidLoad() {
            super.viewDidLoad()
            self.button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+            setupUI()
        }
     
+    func setupUI() {
+        let texts = Localizables.resultForTransactionVC.self
+        button.setTitle(texts.buttonTitle, for: .normal)
+        titleLabel.text = texts.descriptionLabel
+    }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
     }

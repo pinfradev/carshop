@@ -17,6 +17,43 @@ struct ViewControllersForApp {
     static let modifyVehicleVC = "ModifyVehicleVC"
 }
 
+struct Localizables {
+    struct MainVC {
+        static let buttonTitle = NSLocalizedString("main_vc.button_title", comment: "")
+    }
+    
+    struct DetailsForVehicleVC {
+        static let buttonTitle = NSLocalizedString("details_for_vehicle_vc.button_title", comment: "")
+        static let seatsLabel = NSLocalizedString("details_for_vehicle_vc.seats_label", comment: "")
+        static let priceLabel = NSLocalizedString("details_for_vehicle_vc.price_label", comment: "")
+        static let newOldLabel = NSLocalizedString("details_for_vehicle_vc.new_old_label", comment: "")
+        static let modelLabel = NSLocalizedString("details_for_vehicle_vc.model_label", comment: "")
+        static let releaseDateLabel = NSLocalizedString("details_for_vehicle_vc.release_date_label", comment: "")
+        static let categoryLabel = NSLocalizedString("details_for_vehicle_vc.category_label", comment: "")
+        static let spaceLabel = NSLocalizedString("details_for_vehicle_vc.space_label", comment: "")
+        static let payloadLabel = NSLocalizedString("details_for_vehicle_vc.payload_label", comment: "")
+        static let bateryLabel = NSLocalizedString("details_for_vehicle_vc.batery_label", comment: "")
+    }
+    
+    struct ModifyVehicleVC {
+         static let buttonTitle = NSLocalizedString("modify_vehicle_vc.button_title", comment: "")
+         static let seatsLabel = NSLocalizedString("modify_vehicle_vc.seats_label", comment: "")
+         static let priceLabel = NSLocalizedString("modify_vehicle_vc.price_label", comment: "")
+         static let newOldLabel = NSLocalizedString("modify_vehicle_vc.new_old_label", comment: "")
+         static let modelLabel = NSLocalizedString("modify_vehicle_vc.model_label", comment: "")
+         static let releaseDateLabel = NSLocalizedString("modify_vehicle_vc.release_date_label", comment: "")
+         static let categoryLabel = NSLocalizedString("modify_vehicle_vc.category_label", comment: "")
+         static let spaceLabel = NSLocalizedString("modify_vehicle_vc.space_label", comment: "")
+         static let payloadLabel = NSLocalizedString("modify_vehicle_vc.payload_label", comment: "")
+         static let bateryLabel = NSLocalizedString("modify_vehicle_vc.batery_label", comment: "")
+     }
+    
+    struct resultForTransactionVC {
+        static let buttonTitle = NSLocalizedString("result_for_transaction.button_title", comment: "")
+        static let descriptionLabel = NSLocalizedString("result_for_transaction.description_label", comment: "")
+    }
+}
+
 enum CollectionCellTypes {
     case catalogItemCell
 }
@@ -45,9 +82,10 @@ enum TableCellTypes {
 }
 
 enum InitialCategories: String {
-    case Electrical
-    case Commercial
-    case Truck
+    case ELECTRICAL
+    case COMMERCIAL
+    case TRUCK
+    case All
 }
 enum TableCellStyles {
     case newCategory
@@ -58,6 +96,8 @@ enum TableCellStyles {
     case date
     case category
     case batteryCapacity
+    case space
+    case payload
 }
 
 struct TableCells {

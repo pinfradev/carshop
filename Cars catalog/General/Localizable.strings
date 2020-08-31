@@ -5,3 +5,37 @@
   Created by Fray Pineda on 8/29/20.
   Copyright © 2020 New town. All rights reserved.
 */
+
+//MARK: MainVC
+"main_vc.button_title" = "Add category";
+
+//MARK: DetailsForVehicleVC
+
+"details_for_vehicle_vc.button_title" = "Modify";
+"details_for_vehicle_vc.seats_label" = "Number of seats";
+"details_for_vehicle_vc.price_label" = "Price";
+"details_for_vehicle_vc.new_old_label" = "";
+"details_for_vehicle_vc.model_label" = "Model";
+"details_for_vehicle_vc.release_date_label" = "Realease year";
+"details_for_vehicle_vc.category_label" = "Category";
+"details_for_vehicle_vc.space_label" = "Space";
+"details_for_vehicle_vc.payload_label" = "Payload";
+"details_for_vehicle_vc.batery_label" = "Batery";
+
+//MARK: ModifyVehicleVC
+
+"modify_vehicle_vc.button_title" = "Save";
+"modify_vehicle_vc.seats_label" = "Number of seats";
+"modify_vehicle_vc.price_label" = "Price";
+"modify_vehicle_vc.new_old_label" = "new/old";
+"modify_vehicle_vc.model_label" = "Model";
+"modify_vehicle_vc.release_date_label" = "Realease year";
+"modify_vehicle_vc.category_label" = "Category";
+"modify_vehicle_vc.space_label" = "Space";
+"modify_vehicle_vc.payload_label" = "Payload";
+"modify_vehicle_vc.batery_label" = "Batery";
+
+
+// MARK: ResultForTransactionVC
+"result_for_transaction.button_title" = "Accept";
+"result_for_transaction.description_label" = "Successfully updated";

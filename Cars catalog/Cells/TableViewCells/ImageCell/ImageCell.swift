@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ImageCell: UITableViewCell {
 
+    
+    @IBOutlet weak var carImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.selectionStyle = .none
+    }
+    
+    func loadImage(with url: URL) {
+        carImage.sd_setImage(with: url, completed: nil)
     }
     
 }

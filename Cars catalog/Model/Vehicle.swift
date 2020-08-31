@@ -7,13 +7,28 @@
 //
 
 import Foundation
-
+import Firebase
 
 class Vehicle {
+    var categoryReference: DocumentReference?
+    var documentPath: String?
     var numberOfSeats: Int?
     var price: Double?
-    var condition: String?
+    var newOld: String?
     var model: String?
-    var date: Date?
+    var date: Int?
     var category: String?
+    var photo: String?
+    var batery: String?
+    var payload: Double?
+    var space: String?
+    
+    var urlPhoto: URL? {
+        if let picture = photo {
+            let url = URL(string: picture)
+            return url
+        } else {
+            return nil
+        }
+    }
 }
