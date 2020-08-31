@@ -15,6 +15,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultForTransactionVC" customModule="Cars_catalog" customModuleProvider="target">
             <connections>
                 <outlet property="button" destination="ODQ-u5-Pe4" id="5j0-Xw-GrA"/>
+                <outlet property="titleLabel" destination="RsX-T3-7Af" id="PFF-Zo-M6z"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CatalogItemCell: UICollectionViewCell {
-
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    func setupUI(vehicle: Vehicle) {
+        if let photo = vehicle.urlPhoto {
+            imageView.sd_setImage(with: photo, completed: nil)
+        }
+        
+        if let title = vehicle.model{
+            titleLabel.text = title
+        }
     }
 
 }
