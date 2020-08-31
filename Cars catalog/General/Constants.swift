@@ -47,6 +47,11 @@ struct Localizables {
          static let payloadLabel = NSLocalizedString("modify_vehicle_vc.payload_label", comment: "")
          static let bateryLabel = NSLocalizedString("modify_vehicle_vc.batery_label", comment: "")
      }
+    
+    struct resultForTransactionVC {
+        static let buttonTitle = NSLocalizedString("result_for_transaction.button_title", comment: "")
+        static let descriptionLabel = NSLocalizedString("result_for_transaction.description_label", comment: "")
+    }
 }
 
 enum CollectionCellTypes {

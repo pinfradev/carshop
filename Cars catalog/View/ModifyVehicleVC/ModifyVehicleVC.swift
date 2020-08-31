@@ -14,6 +14,12 @@ class ModifyVehicleVC: UIViewController {
     var currentCategory: VehicleCategory?
     var presenter: SavingPresenter?
     var dict: [String: Any] = [:]
+    var numberOfSeatsCell: AddInfoItemCell?
+    var priceCell: AddInfoItemCell?
+    var newOldCell: AddInfoItemCell?
+    var modelCell: AddInfoItemCell?
+    var dateCell: AddInfoItemCell?
+    var categoryCell: AddInfoItemCell?
     
     var cells: [TableCellTypes] = [TableCellTypes.imageCell,
                                     TableCellTypes.addInfoItemCell(.numberOfSeats),
@@ -89,8 +95,30 @@ extension ModifyVehicleVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     @objc func saveButtonTapped() {
+        if let c = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? AddInfoItemCell  {
+            dict["numberOfSeats"] = Int(c.valueTextField.text ?? "0")
+        }
+        if let c = tableView.cellForRow(at: IndexPath(row: 2, section: 0)) as? AddInfoItemCell  {
+            dict["price"] = Double(c.valueTextField.text ?? "0")
+        }
+        if let c = tableView.cellForRow(at: IndexPath(row: 3, section: 0)) as? AddInfoItemCell  {
+            dict["newOld"] = c.valueTextField.text
+        }
+        if let c = tableView.cellForRow(at: IndexPath(row: 4, section: 0)) as? AddInfoItemCell  {
+            dict["model"] = c.valueTextField.text
+        }
+        if let c = tableView.cellForRow(at: IndexPath(row: 5, section: 0)) as? AddInfoItemCell  {
+            dict["date"] = Int(c.valueTextField.text ?? "0")
+        }
+        if let cat = currentVehicle?.categoryReference {
+            dict["category"] = cat
+        }
         
-        //presenter?.updateVehicle(path: currentVehicle?.documentPath, dict: <#T##[String : Any]#>)
+        if let photo = currentVehicle?.photo {
+            dict["photo"] = photo
+        }
+
+        presenter?.updateVehicle(path: currentVehicle?.documentPath ?? "", dict: dict)
       }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -100,7 +128,7 @@ extension ModifyVehicleVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ModifyVehicleVC: ModifyView {
-    func modifyVehicleSucceded() {
+    func modifyVehicleSucceded(message: String) {
         let vc = ViewsFactory.getViewControllerFromFactory(.resultForTransactionVC)
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -7,8 +7,8 @@
 //
 
 import Foundation
+import Firebase
 
 class VehicleCategory  {
-    var documentPath: String?
     var name: String?
 }

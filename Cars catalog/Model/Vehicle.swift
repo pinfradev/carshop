@@ -7,9 +7,10 @@
 //
 
 import Foundation
-
+import Firebase
 
 class Vehicle {
+    var categoryReference: DocumentReference?
     var documentPath: String?
     var numberOfSeats: Int?
     var price: Double?

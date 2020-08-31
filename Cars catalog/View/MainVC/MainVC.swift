@@ -31,8 +31,6 @@ class MainVC: UIViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         setupUI()
         presenter = MainPresenter(view: self)
-        activityIndicator.startAnimating()
-        presenter?.getVehicles()
         setupCollectionView()
     }
     
@@ -48,7 +46,8 @@ class MainVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
-        collectionView.reloadData()
+        activityIndicator.startAnimating()
+        presenter?.getVehicles()
     }
 
 }
@@ -72,7 +71,7 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         vc.currentVehicle = filteredVehicles?[indexPath.row]
         if let cats = categories {
             currentCategory = cats.first(where: { cat in
-                return selectedCategory?.uppercased() == cat.name
+                return selectedCategory?.uppercased() == cat.name?.uppercased()
             })
             vc.currentCategory = currentCategory
         }
@@ -109,6 +108,7 @@ extension MainVC: MainVCDelegate {
     }
     
     func setupPicker() {
+        pickerData = [InitialCategories.All.rawValue]
         if let array = categories {
             for cat in array {
                 if let name = cat.name {

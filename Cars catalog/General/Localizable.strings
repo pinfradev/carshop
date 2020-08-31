@@ -34,3 +34,8 @@
 "modify_vehicle_vc.space_label" = "Space";
 "modify_vehicle_vc.payload_label" = "Payload";
 "modify_vehicle_vc.batery_label" = "Batery";
+
+
+// MARK: ResultForTransactionVC
+"result_for_transaction.button_title" = "Accept";
+"result_for_transaction.description_label" = "Successfully updated";

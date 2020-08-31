@@ -44,9 +44,9 @@
 		AB6CAE2524FABCAC00813964 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6CAE2324FABCAC00813964 /* ImageCell.xib */; };
 		AB6CAE2924FABCFF00813964 /* ShowDoubleLineItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6CAE2724FABCFF00813964 /* ShowDoubleLineItemCell.swift */; };
 		AB6CAE2A24FABCFF00813964 /* ShowDoubleLineItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6CAE2824FABCFF00813964 /* ShowDoubleLineItemCell.xib */; };
+		AB8E154C24FC7DEE00ECA4F2 /* SavingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8E154B24FC7DEE00ECA4F2 /* SavingPresenter.swift */; };
 		AB97E08224FC0E9A00276A90 /* VehicleCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97E08124FC0E9A00276A90 /* VehicleCategory.swift */; };
 		AB97E08424FC449800276A90 /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97E08324FC449800276A90 /* StoreService.swift */; };
-		AB97E08624FC457B00276A90 /* SavigPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97E08524FC457B00276A90 /* SavigPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,9 +95,9 @@
 		AB6CAE2324FABCAC00813964 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		AB6CAE2724FABCFF00813964 /* ShowDoubleLineItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDoubleLineItemCell.swift; sourceTree = "<group>"; };
 		AB6CAE2824FABCFF00813964 /* ShowDoubleLineItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDoubleLineItemCell.xib; sourceTree = "<group>"; };
+		AB8E154B24FC7DEE00ECA4F2 /* SavingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingPresenter.swift; sourceTree = "<group>"; };
 		AB97E08124FC0E9A00276A90 /* VehicleCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCategory.swift; sourceTree = "<group>"; };
 		AB97E08324FC449800276A90 /* StoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
-		AB97E08524FC457B00276A90 /* SavigPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavigPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,7 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				AB05A7D024FADEDF00938D70 /* MainPresenter.swift */,
-				AB97E08524FC457B00276A90 /* SavigPresenter.swift */,
+				AB8E154B24FC7DEE00ECA4F2 /* SavingPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -494,12 +494,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8E154C24FC7DEE00ECA4F2 /* SavingPresenter.swift in Sources */,
 				AB6CADE524FA8A8600813964 /* Constants.swift in Sources */,
 				AB6CADDF24FA827300813964 /* ViewsFactory.swift in Sources */,
 				AB05A7CB24FADC3200938D70 /* Truck.swift in Sources */,
 				AB6CAE1324FAB73D00813964 /* ButtonCell.swift in Sources */,
 				AB05A7D824FB038000938D70 /* ResultForTransactionVC.swift in Sources */,
-				AB97E08624FC457B00276A90 /* SavigPresenter.swift in Sources */,
 				AB05A7D524FAF5DD00938D70 /* ModifyVehicleVC.swift in Sources */,
 				AB05A7DC24FB1AD400938D70 /* MainService.swift in Sources */,
 				AB6CAE2924FABCFF00813964 /* ShowDoubleLineItemCell.swift in Sources */,

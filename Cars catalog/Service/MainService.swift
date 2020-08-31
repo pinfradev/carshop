@@ -51,6 +51,7 @@ class MainService {
                         currentVehicle.space = space
                     }
                     if let category = currentDocument["category"] as? DocumentReference{
+                        currentVehicle.categoryReference = category
                         category.getDocument(completion: { res,e in
                             if let e = e {
                                 print("el error es: \(e)")
@@ -85,7 +86,6 @@ class MainService {
                 for document in result!.documents {
                     let currentCategory = VehicleCategory()
                     let currentDocument = document.data()
-                    currentCategory.documentPath = document.reference.path
                     if let name = currentDocument["name"] as? String {
                         currentCategory.name = name
                     }

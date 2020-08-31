@@ -7,10 +7,18 @@
 //
 
 import Foundation
+import Firebase
 
 class StoreService {
     
-    class func updateDocument(path: String, dict: [String: Any], successBlock: @escaping () -> (), errorBlock: @escaping (_ error: String) -> ()) {
-        
+    class func updateDocument(path: String, dict: [String: Any], successBlock: @escaping (_ message: String) -> (), errorBlock: @escaping (_ error: String) -> ()) {
+         let db = Firestore.firestore()
+        db.document(path).setData(dict, completion: { error in
+            if let err = error {
+                errorBlock(err.localizedDescription)
+            } else {
+                successBlock("Successfully updated")
+            }
+        })
     }
 }
