@@ -72,6 +72,7 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         let vc = ViewsFactory.getViewControllerFromFactory(.detailsForVehicleVC) as! DetailsForVehicleVC
         vc.currentVehicle = filteredVehicles?[indexPath.row]
         if let cats = categories {
+            vc.allCategories = cats
             currentCategory = cats.first(where: { cat in
                 return selectedCategory?.uppercased() == cat.name?.uppercased()
             })

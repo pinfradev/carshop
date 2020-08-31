@@ -86,6 +86,7 @@ class MainService {
                 for document in result!.documents {
                     let currentCategory = VehicleCategory()
                     let currentDocument = document.data()
+                    currentCategory.documentReference = document.reference
                     if let name = currentDocument["name"] as? String {
                         currentCategory.name = name
                     }

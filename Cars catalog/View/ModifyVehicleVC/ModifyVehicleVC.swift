@@ -17,12 +17,11 @@ class ModifyVehicleVC: UIViewController {
     var currentCategory: VehicleCategory?
     var presenter: SavingPresenter?
     var dict: [String: Any] = [:]
-    var numberOfSeatsCell: AddInfoItemCell?
-    var priceCell: AddInfoItemCell?
-    var newOldCell: AddInfoItemCell?
-    var modelCell: AddInfoItemCell?
-    var dateCell: AddInfoItemCell?
     var categoryCell: AddInfoItemCell?
+    var categoryPicker = UIPickerView()
+    var allCategories: [VehicleCategory]?
+    var pickerData: [String] = []
+    var selectedCategory: String?
     
     var cells: [TableCellTypes] = [TableCellTypes.imageCell,
                                     TableCellTypes.addInfoItemCell(.numberOfSeats),
@@ -88,6 +87,10 @@ extension ModifyVehicleVC: UITableViewDelegate, UITableViewDataSource {
                 if let currentCell = cell as? AddInfoItemCell, let vehicle = currentVehicle {
                     currentCell.setupUI(with: style, vehicle: vehicle)
                     cell = currentCell
+                    if let c = cell as? AddInfoItemCell, style == .category {
+                        categoryCell = c
+                        setupPicker()
+                    }
                 }
             break
             
@@ -95,6 +98,20 @@ extension ModifyVehicleVC: UITableViewDelegate, UITableViewDataSource {
                 break
         }
         return cell
+    }
+    
+    func setupPicker() {
+        if let categories = allCategories {
+            for cat in categories {
+                if let name = cat.name {
+                    pickerData.append(name)
+                }
+            }
+        }
+        categoryPicker.delegate = self
+        categoryPicker.dataSource = self
+        categoryCell?.valueTextField.inputView = categoryPicker
+        
     }
 
     @objc func saveButtonTapped() {
@@ -114,7 +131,19 @@ extension ModifyVehicleVC: UITableViewDelegate, UITableViewDataSource {
             dict["date"] = Int(c.valueTextField.text ?? "0")
         }
         if let cat = currentVehicle?.categoryReference {
-            dict["category"] = cat
+            let categoryReference = allCategories?.first(where: { category in
+                if let name = category.name, let selected = selectedCategory {
+                    return name.uppercased() == selected.uppercased()
+                } else {
+                    return false
+                }
+            })
+            if let foundCategory = categoryReference {
+                dict["category"] = foundCategory.documentReference
+            } else {
+                dict["category"] = cat
+            }
+            
         }
         
         if let photo = currentVehicle?.photo {
@@ -145,3 +174,25 @@ extension ModifyVehicleVC: ModifyView {
     
 }
 
+extension ModifyVehicleVC: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let currentCategory = pickerData[row]
+        categoryCell?.valueTextField.text = currentCategory
+        selectedCategory = currentCategory
+        categoryCell?.valueTextField.resignFirstResponder()
+    }
+    
+    
+}

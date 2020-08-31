@@ -10,5 +10,6 @@ import Foundation
 import Firebase
 
 class VehicleCategory  {
+    var documentReference: DocumentReference?
     var name: String?
 }
