@@ -41,7 +41,7 @@ class MainService {
                     if let date = currentDocument["date"] as? Int {
                         currentVehicle.date = date
                     }
-                    if let payload = currentDocument["payload"] as? Double {
+                    if let payload = currentDocument["payload"] as? String {
                         currentVehicle.payload = payload
                     }
                     if let batery = currentDocument["batery"] as? String {
@@ -86,6 +86,7 @@ class MainService {
                 for document in result!.documents {
                     let currentCategory = VehicleCategory()
                     let currentDocument = document.data()
+                    currentCategory.documentReference = document.reference
                     if let name = currentDocument["name"] as? String {
                         currentCategory.name = name
                     }

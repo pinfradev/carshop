@@ -39,3 +39,14 @@
 // MARK: ResultForTransactionVC
 "result_for_transaction.button_title" = "Accept";
 "result_for_transaction.description_label" = "Successfully updated";
+
+//MARK: NewCategoryVC
+
+"new_category_vc.main_title_label_text" = "Add New Category";
+"new_category_vc.description_label_text" = "New Category";
+"new_category_vc.main_button_title" = "Accept";
+
+
+//MARK: VehicleExtraInfoVC
+
+"vehicle_extra_info_vc.main_button_title" = "Save";

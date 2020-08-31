@@ -22,6 +22,7 @@ class DetailsForVehicleVC: UIViewController {
     
     var currentVehicle: Vehicle?
     var currentCategory: VehicleCategory?
+    var allCategories: [VehicleCategory]?
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = false
@@ -117,6 +118,7 @@ extension DetailsForVehicleVC: UITableViewDelegate, UITableViewDataSource {
             vc.currentCategory = cat
         }
         vc.currentVehicle = currentVehicle
+        vc.allCategories = self.allCategories
         navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -44,7 +44,6 @@ class AddInfoItemCell: UITableViewCell {
                 titleLabel.text = texts.categoryLabel
                 if let value = vehicle.category {
                     valueTextField.text = String(value)
-                    valueTextField.isEnabled = false
                 }
                 break
             case .date:

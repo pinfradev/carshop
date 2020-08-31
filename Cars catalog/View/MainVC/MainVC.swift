@@ -37,6 +37,7 @@ class MainVC: UIViewController {
     func setupUI() {
         let strings = Localizables.MainVC.self
         newCategoryButton.setTitle(strings.buttonTitle, for: .normal)
+        newCategoryButton.addTarget(self, action: #selector(newCategoryButtonTapped), for: .touchUpInside)
     }
     func setupCollectionView() {
         collectionView.delegate = self
@@ -50,6 +51,11 @@ class MainVC: UIViewController {
         categoriesTF.text = ""
         activityIndicator.startAnimating()
         presenter?.getVehicles()
+    }
+    
+    @objc func newCategoryButtonTapped() {
+        let vc = ViewsFactory.getViewControllerFromFactory(.newCategoryVC)
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }
@@ -72,6 +78,7 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         let vc = ViewsFactory.getViewControllerFromFactory(.detailsForVehicleVC) as! DetailsForVehicleVC
         vc.currentVehicle = filteredVehicles?[indexPath.row]
         if let cats = categories {
+            vc.allCategories = cats
             currentCategory = cats.first(where: { cat in
                 return selectedCategory?.uppercased() == cat.name?.uppercased()
             })

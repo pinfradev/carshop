@@ -15,6 +15,7 @@ struct ViewControllersForApp {
     static let newCategoryVC = "NewCategoryVC"
     static let resultForTransactionVC = "ResultForTransactionVC"
     static let modifyVehicleVC = "ModifyVehicleVC"
+    static let vehicleExtraInfoVC = "VehicleExtraInfoVC"
 }
 
 struct Localizables {
@@ -51,6 +52,15 @@ struct Localizables {
     struct resultForTransactionVC {
         static let buttonTitle = NSLocalizedString("result_for_transaction.button_title", comment: "")
         static let descriptionLabel = NSLocalizedString("result_for_transaction.description_label", comment: "")
+    }
+    
+    struct NewCategoryVC {
+        static let mainTitleLabelText = NSLocalizedString("new_category_vc.main_title_label_text", comment: "")
+        static let descriptionLabelText = NSLocalizedString("new_category_vc.description_label_text", comment: "")
+        static let mainButtonTitle = NSLocalizedString("new_category_vc.main_button_title", comment: "")
+    }
+    struct VehicleExtraInfoVC {
+        static let mainButtonTitle = NSLocalizedString("vehicle_extra_info_vc.main_button_title", comment: "")
     }
 }
 

@@ -20,7 +20,7 @@ class Vehicle {
     var category: String?
     var photo: String?
     var batery: String?
-    var payload: Double?
+    var payload: String?
     var space: String?
     
     var urlPhoto: URL? {

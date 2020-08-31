@@ -68,7 +68,7 @@ class ShowDoubleLineItemCell: UITableViewCell {
                 case .payload:
                     titleLabel.text = texts.payloadLabel
                     if let value = vehicle.payload{
-                        valueLabel.text = String(value)
+                        valueLabel.text = value
                     }
                     break
                 default:
