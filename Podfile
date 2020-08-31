@@ -7,4 +7,11 @@ target 'Cars catalog' do
 
   # Pods for Cars catalog
 
+# add pods for desired Firebase products
+# https://firebase.google.com/docs/ios/setup#available-pods
+
+pod 'Firebase/Firestore'
+pod 'Firebase/Core'
+pod 'FirebaseFirestoreSwift'
+pod 'SDWebImage', '~> 5.0'
 end

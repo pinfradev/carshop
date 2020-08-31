@@ -15,6 +15,7 @@ enum ViewType {
     case newCategoryVC
     case resultForTransactionVC
     case modifyVehicleVC
+    case vehicleExtraInfoVC
 }
 
 class ViewsFactory {
@@ -31,14 +32,21 @@ class ViewsFactory {
             case .detailsForVehicleVC:
                 let vc = DetailsForVehicleVC(nibName: ViewControllersForApp.detailsForVehicleVC, bundle: nil)
                 viewController = vc
+                break
             case .newCategoryVC:
                 let vc = NewCategoryVC(nibName: ViewControllersForApp.newCategoryVC, bundle: nil)
                 viewController = vc
+                break
             case .resultForTransactionVC:
                 let vc = ResultForTransactionVC(nibName: ViewControllersForApp.resultForTransactionVC, bundle: nil)
                 viewController = vc
+                break
             case .modifyVehicleVC:
                 let vc = ModifyVehicleVC(nibName: ViewControllersForApp.modifyVehicleVC, bundle: nil)
+                viewController = vc
+                break
+            case .vehicleExtraInfoVC:
+                let vc = VehicleExtraInfoVC(nibName: ViewControllersForApp.vehicleExtraInfoVC, bundle: nil)
                 viewController = vc
         }
         
